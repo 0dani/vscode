@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //prompt: 반환값 - String, 연산하려면 형변환필요!
+       let java=Number(prompt("java점수를 입력하세요"));
+       let python=Number(prompt("python점수를 입력하세요"));
+       let R=Number(prompt("R점수를 입력하세요"));
+
+       let avg1=(java+python+R)/3;
+       console.log(avg1);
+       //소수점 자르기
+       let avg2=((java+python+R)/3).toFixed(2); //.toFixed(2): 소수점 두 자리까지만 보겠다! 라는 뜻
+
+       if(avg2>=90){
+        console.log("당신의 평균은",avg2,"이고 A입니다");
+       }else if(avg2>=80){
+        console.log("당신의 평균은",avg2,"이고 B입니다");
+       }else if(avg2>=70){
+        console.log("당신의 평균은",avg2,"이고 C입니다");
+       }else{
+        console.log("당신의 평균은",avg2,"이고 F입니다");
+       }
+
+    </script>
+</body>
+</html>

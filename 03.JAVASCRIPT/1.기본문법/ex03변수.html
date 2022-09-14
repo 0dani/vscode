@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //변수 선언: 사용자가 입력한 값 저장
+    //    var name=prompt("이름을 입력하세요");
+
+    //    console.log(name+"님 환영합니다");
+       //console.log(name,"님 환영합니다"); - 이것도 가능
+
+        //var: 재선언(메모리 공간 새롭게 할당), 재할당 가능
+        var a=1;
+        var a=2;//재선언
+        console.log(a);//마지막에 선언한 2 출력
+
+        a=3;//재할당
+        console.log(a);//마지막에 선언한 3이 출력됨
+
+        //let: 재선언 불가능, 재할당 가능
+        let b=1;
+        // let b=2; - 불가능
+
+        b=2;
+        console.log(b);//2 출력
+
+        //const: 상수 선언 - 재선언, 재할당 불가능
+        const c=1;
+        // const c=2; - 불가능
+        // c=2; - 불가능
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=Number(prompt("시작 숫자를 입력해주세요"));
+        let b=Number(prompt("마지막 숫자를 입력해주세요"));
+
+        let sum=0;
+        //let sum; -> undefined => 이 상태에서 연산하려고 하면 콘솔창에2 Nan오류가 뜸! 
+
+        for(let i=a;i<=b;i++){
+            sum+=i;
+        }
+        console.log(a+"부터 "+b+"까지의 합>> ", sum);
+
+    </script>
+</body>
+</html>

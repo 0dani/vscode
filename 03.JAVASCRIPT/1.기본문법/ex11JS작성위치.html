@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 내부 방식! -->
+    <script>
+        var a=10;
+    </script>
+
+    <!-- 외부방식
+         외부 JS는 head에 많이 작성함!
+    -->
+    <script src="./ex11.js"></script>
+    <!-- 외부 JS를 해석하느라 로딩이 오래 걸릴 때 해결할 수 있는 방법 
+        (1)async: 브라우저가 렌더링을 하는 동안(html 파싱) 병렬로 js 다운로드 명령 => js 다운로드 완료시 html 파싱이 멈춤 => 다운로드한 js 실행
+        => 다운로드 받는 속도 절약할 수 있음, html파싱이 잠깐 멈추기 때문에 페이지를 보는데 시간이 좀 걸림, 내가 원하는 화면이 안 나올 수도 있음(js다운보다 html파싱이 더 빠를 경우)
+    -->
+    <script async src="./ex11.js"></script>
+
+    <!-- (2)defer: 모든 js파일이 다운로드가 되고 html 파싱 이후에 실행, async의 단점 보완 -->
+    <script defer src="./ex11.js"></script>
+
+
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 인라인 방식 -->
+    <button onclick="ck()">클릭</button> 
+    <!-- 이미 위에서 외부JS파일을 연결했기 때문에 외부 JS파일에 있는 함수를 바로 쓸 수 있음 -->
+    <button onmouseenter="alert('마우스 올림')">마우스 올리기</button>
+    <!-- "" 입력이 안 될 때 안에 내용은 '' 쓰기 -->
+    <button onmousewheel="alert('스크롤!')">스크롤 작동</button>
+
+
+    <!-- 내부 방식! -> html코드 아래 쪽에 작성해주기! 
+        JS가 해석되는 동안에는 아래에 있는 코드들이 해석이 되지 않아서~
+    -->
+    <script>
+        var b=10;
+    </script>
+    
+</body>
+</html>

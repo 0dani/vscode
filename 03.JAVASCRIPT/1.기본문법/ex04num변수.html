@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=312;
+
+        let num2=num%100
+        
+        console.log("백의 자리 이하 버린 결과>> "+(num-num2));//+: 문자열로 출력됨
+        console.log("백의 자리 이하 버린 결과>> ",(num-num2));//,: 숫자로 출력됨
+        
+        //다르게 출력하는 방법 - parseInt: 정수로 형변환
+        console.log(parseInt(num/100)*100);
+        console.log(parseInt(num/100)+"00");
+
+        //parseFloat(실수로 형변환)
+        let num3="3.01";
+        parseFloat(num3);
+
+        //Number(숫자형으로 형변환)
+        Number(num3);
+
+        //prompt의 결과값(문자열-String)을 바로 숫자형으로 변환
+       Number(prompt("나이 입력"));
+
+        //toString(숫자를 문자열로 변환)
+       let num4=100;
+       console.log(num4); //숫자 100 출력
+       console.log(num4.toString());//문자 100 출력
+       console.log(String(num4));//문자 100 출력
+    </script>
+</body>
+</html>
